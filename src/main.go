@@ -1,17 +1,15 @@
 package main
 
 import (
+	"io/ioutil"
 	"log"
 	"net/http"
 )
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/h1", func(writer http.ResponseWriter, request *http.Request) {
-		//第一步必须:解释
-		request.ParseForm()
-		//第二步:获取值
-		rt := request.FormValue("a")
+	mux.HandleFunc("/json", func(writer http.ResponseWriter, request *http.Request) {
+		rt, _ := ioutil.ReadAll(request.Body)
 		writer.Write([]byte(rt))
 	})
 	//x 指定路径上监听消息 - 如果ListenAndServe指定了第2个参数,那么这个就报废了

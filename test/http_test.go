@@ -1,22 +1,19 @@
 package test
 
 import (
+	"bytes"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"net/http"
-	"net/url"
 	"testing"
 )
 
-//模拟get
-func TestGeta(t *testing.T) {
-	resp, _ := http.Get("http://127.0.0.1:8080/h1?a=ok")
+//模拟post - 提交json整段数据
+func TestPOSTjson(t *testing.T) {
+	bodys := "{\"xx\":\"1\"}"
+	resp, _ := http.Post("http://127.0.0.1:8080/json", "application/json;charset=utf-8", bytes.NewBuffer([]byte(bodys)))
+	//程序在使用完回复后必须关闭回复的主体。
+	defer resp.Body.Close()
 	body, _ := ioutil.ReadAll(resp.Body)
-	assert.Equal(t, string(body), "ok")
-}
-//模拟post
-func TestPOSTa(t *testing.T) {
-	resp, _ := http.PostForm("http://127.0.0.1:8080/h1", url.Values{"a": {"ok2"}})
-	body, _ := ioutil.ReadAll(resp.Body)
-	assert.Equal(t, string(body), "ok2")
+	assert.Equal(t, string(body), bodys)
 }

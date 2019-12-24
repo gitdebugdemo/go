@@ -6,7 +6,7 @@
 
 [Dockerfile源码](./Dockerfile)
 
-docker run --rm  -it   registry.cn-shanghai.aliyuncs.com/copygithub/github:gitdebugdemo-5e01b0a8269bf1577169064;
+docker run --rm  -it   registry.cn-shanghai.aliyuncs.com/copygithub/github:gitdebugdemo-5e01c36601d441577173862;
 
 
 # 原项目的说明

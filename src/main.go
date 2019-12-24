@@ -8,10 +8,11 @@ import (
 func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/h1", func(writer http.ResponseWriter, request *http.Request) {
-		writer.Write([]byte("h1"))
-	})
-	mux.HandleFunc("/h2", func(writer http.ResponseWriter, request *http.Request) {
-		writer.Write([]byte("h2"))
+		//第一步必须:解释
+		request.ParseForm()
+		//第二步:获取值
+		rt := request.FormValue("a")
+		writer.Write([]byte(rt))
 	})
 	//x 指定路径上监听消息 - 如果ListenAndServe指定了第2个参数,那么这个就报废了
 	http.HandleFunc("/xx", func(resp http.ResponseWriter, req *http.Request) {

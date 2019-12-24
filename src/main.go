@@ -10,6 +10,7 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/json", func(writer http.ResponseWriter, request *http.Request) {
 		rt, _ := ioutil.ReadAll(request.Body)
+		log.Printf("%+v",string(rt))
 		writer.Write([]byte(rt))
 	})
 	//x 指定路径上监听消息 - 如果ListenAndServe指定了第2个参数,那么这个就报废了

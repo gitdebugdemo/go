@@ -5,4 +5,4 @@ WORKDIR  /root/
 #git源码拷贝到运行目录下
 COPY /  /root/
 
-CMD ["/bin/sh","/root/CMD.sh"]
+CMD ["/usr/local/go","/root/src/main.go"]

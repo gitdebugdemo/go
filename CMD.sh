@@ -4,5 +4,5 @@ cd `dirname $0`
 function error(){ echo  -e "\033[41;36m $1 \033[0m";}
 function ok(){ echo  -e "\033[42;30m $1 \033[0m";}
 source ./before.sh
-./main.sh
-./after.sh
+source ./main.sh
+source ./after.sh

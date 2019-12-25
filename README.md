@@ -9,13 +9,13 @@ main.sh 为当前项目语言的标准测试
 * go /usr/local/go/bin/go run /root/src/main.go &
 
 # 分支备注
-字符串反序列化成对象(指定字段名);
+md5;
 
 # 懒人一键验证效果
 
 [Dockerfile源码](./Dockerfile)
 
-docker run --rm  -it   registry.cn-shanghai.aliyuncs.com/copygithub/github:gitdebugdemo-5e01efdec8c7a1577185246;
+docker run --rm  -it   registry.cn-shanghai.aliyuncs.com/copygithub/github:gitdebugdemo-5e02c6d28ec081577240274;
 
 
 # 原项目的说明

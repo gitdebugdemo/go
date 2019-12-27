@@ -16,7 +16,7 @@ if [ $mysql_up -gt 0 ]; then
   ok "mysql 服务启动成功!"
 else
     #启动mysql服务
-    source docker-entrypoint.sh mysqld &
+    docker-entrypoint.sh mysqld &
 
     #等待20秒.等mysql服务器启动之后,才执行业务
     for times in $(seq 1 100)

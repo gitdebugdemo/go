@@ -1,4 +1,4 @@
-FROM golang:1.13.5-stretch
+FROM xltxlm/mysql:8.0-go.1.13.5
 
 WORKDIR  /root/
 

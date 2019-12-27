@@ -3,10 +3,10 @@
 逻辑代码肯定放在test目录,并且下面没几个文件,最多2个文件<br>
 
 入口文件为: CMD.sh<br>
-main.sh 为当前项目语言的标准测试<br>
+各语言的标准测试<br>
 
 * php vendor/bin/phpunit
-* go /usr/local/go/bin/go run /root/src/main.go &
+* go /usr/local/go/bin/go run -mod=vendor /root/src/main.go &
 
 # 分支备注
 ;

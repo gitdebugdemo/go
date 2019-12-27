@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker build -t  registry.cn-shanghai.aliyuncs.com/copygithub/github:gitdebugdemo-5e02c6d28ec081577240274 ./;
+docker build -t  registry.cn-shanghai.aliyuncs.com/copygithub/github:gitdebugdemo-5e05a7d68a0d81577428950 ./;
 
-docker push registry.cn-shanghai.aliyuncs.com/copygithub/github:gitdebugdemo-5e02c6d28ec081577240274;
+docker push registry.cn-shanghai.aliyuncs.com/copygithub/github:gitdebugdemo-5e05a7d68a0d81577428950;
 

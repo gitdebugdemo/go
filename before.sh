@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
 #初始化数据结构
-mysql -u123456 <./sql/userinfo.sql
+mysql -p123456 <./sql/userinfo.sql

@@ -19,7 +19,7 @@ else
     docker-entrypoint.sh mysqld &
 
     #等待20秒.等mysql服务器启动之后,才执行业务
-    for times in $(seq 1 100)
+    for times in $(seq 1 300)
     do
       #观察mysql的端口是否已经起来了
       mysql_up=$(netstat -tnlpu | grep 3306 | wc -l)

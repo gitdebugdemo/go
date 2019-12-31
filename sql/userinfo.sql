@@ -1,4 +1,4 @@
-CREATE TABLE `userinfo` (
+CREATE TABLE IF not  exists  `userinfo` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT COMMENT 'id',
   `name` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '姓名',
   `add_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT '入学时间',
